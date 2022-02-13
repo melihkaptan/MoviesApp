@@ -18,7 +18,7 @@ class MovieRepositoryImpl(
     private val remoteMapper: MovieRemoteMapper
 ) : MovieRepository {
 
-    override fun insertMovies(lstMovie: List<Movie>) {
+    override suspend fun insertMovies(lstMovie: List<Movie>) {
         lstMovie.map {
             localDataSource.insertMovie(cacheMapper.mapToEntity(it))
         }

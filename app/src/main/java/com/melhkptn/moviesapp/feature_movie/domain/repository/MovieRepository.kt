@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface MovieRepository {
 
-    fun insertMovies(lstMovie: List<Movie>)
+    suspend fun insertMovies(lstMovie: List<Movie>)
     fun getAllMovies(page: Int): Flow<Resource<List<Movie>?>>
     fun getMovieDetail(id: Int): Flow<Resource<Movie?>>
     fun getAllMoviesDb(): Flow<Resource<List<Movie>?>>

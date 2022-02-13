@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertMovie(movieCacheDto: MovieCacheDto)
+    suspend fun insertMovie(movieCacheDto: MovieCacheDto)
 
     @Query("SELECT * FROM movies")
     fun getAllMoviesDb() : Flow<List<MovieCacheDto>>

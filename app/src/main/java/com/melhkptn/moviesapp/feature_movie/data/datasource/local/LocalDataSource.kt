@@ -6,7 +6,7 @@ import javax.inject.Inject
 class LocalDataSource @Inject constructor(
     private val dao: MovieDao
 ) {
-    fun insertMovie(movieCacheDto: MovieCacheDto) = dao.insertMovie(movieCacheDto)
+    suspend fun insertMovie(movieCacheDto: MovieCacheDto) = dao.insertMovie(movieCacheDto)
 
     fun gellAllMovies() : Flow<List<MovieCacheDto>?> = dao.getAllMoviesDb()
 
