@@ -12,7 +12,9 @@ import com.melhkptn.moviesapp.feature_movie.data.datasource.remote.MovieRemoteMa
 import com.melhkptn.moviesapp.feature_movie.data.datasource.remote.RemoteDataSource
 import com.melhkptn.moviesapp.feature_movie.data.repository.MovieRepositoryImpl
 import com.melhkptn.moviesapp.feature_movie.domain.repository.MovieRepository
+import com.melhkptn.moviesapp.feature_movie.domain.usecases.GetMovieDetail
 import com.melhkptn.moviesapp.feature_movie.domain.usecases.GetPopularMovies
+import com.melhkptn.moviesapp.feature_movie.domain.usecases.MovieUseCases
 import com.melhkptn.moviesapp.feature_movie.domain.util.Constants
 import com.melhkptn.moviesapp.feature_movie.domain.util.Constants.BASE_URL
 import com.melhkptn.moviesapp.feature_movie.domain.util.DefaultRequestInterceptor
@@ -92,6 +94,9 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideGetPopularMovies(movieRepository: MovieRepository): GetPopularMovies =
-        GetPopularMovies(movieRepository)
+    fun provideMovieUseCases(movieRepository: MovieRepository): MovieUseCases =
+        MovieUseCases(
+            getPopularMovies = GetPopularMovies(movieRepository),
+            getMovieDetail = GetMovieDetail(movieRepository)
+        )
 }

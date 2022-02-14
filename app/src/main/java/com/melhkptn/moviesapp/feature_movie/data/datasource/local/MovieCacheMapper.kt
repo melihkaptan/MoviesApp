@@ -1,7 +1,7 @@
 package com.melhkptn.moviesapp.feature_movie.data.datasource.local
 
-import com.melhkptn.moviesapp.feature_movie.domain.model.Movie
 import com.melhkptn.moviesapp.core.util.EntityMapper
+import com.melhkptn.moviesapp.feature_movie.domain.model.Movie
 import javax.inject.Inject
 
 class MovieCacheMapper @Inject constructor(

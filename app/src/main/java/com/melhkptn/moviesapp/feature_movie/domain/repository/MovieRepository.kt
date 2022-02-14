@@ -1,7 +1,7 @@
 package com.melhkptn.moviesapp.feature_movie.domain.repository
 
-import com.melhkptn.moviesapp.feature_movie.domain.model.Movie
 import com.melhkptn.moviesapp.core.util.Resource
+import com.melhkptn.moviesapp.feature_movie.domain.model.Movie
 import kotlinx.coroutines.flow.Flow
 
 

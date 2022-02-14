@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:chipStrokeColor="@color/white"
+        app:chipStrokeWidth="2dp"
+        android:textColor="@color/white"
+        app:chipBackgroundColor="#15141F"
+        tools:text="Action">
+
+    </com.google.android.material.chip.Chip>
+
+</LinearLayout>
